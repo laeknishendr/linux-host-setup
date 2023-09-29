@@ -1,0 +1,35 @@
+---
+- name: Set up repositories
+  ansible.builtin.apt_repository:
+    repo: "{{ item }}"
+    state: present
+  loop: "{{ repos }}"
+
+- name: Install packages
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ packages_to_install }}"
+
+- name: Install oh-my-zsh
+  shell: "{{ oh_my_zsh_install_command }}"
+
+- name: Set up zsh as default shell for user
+  ansible.builtin.user:
+    user: "{{ myuser }}"
+    shell: "/bin/zsh"
+
+- name: Copy .vimrc
+  ansible.builtin.copy:
+    src: ".vimrc"
+    dest: "/home/{{ myuser }}/.vimrc"
+- name: Copy .zshrc
+  ansible.builtin.copy:
+    src: ".zshrc"
+    dest: "/home/{{ myuser }}/.zshrc"
+
+- name: Set up host entries
+  template:
+    src: "etc/hosts.j2"
+    dest: "/etc/hosts"
+
