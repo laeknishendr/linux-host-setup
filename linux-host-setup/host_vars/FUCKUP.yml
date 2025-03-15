@@ -1,0 +1,11 @@
+repos:
+  - "deb http://ftp.debian.org/debian stable main contrib non-free"
+  - "deb http://repository.spotify.com stable non-free"
+  - "https://brave-browser-rpm-release.s3.brave.com/x86_64/"
+packages_to_install:
+  - vim
+  - zsh
+  - terminator
+  - spotify
+
+oh_my_zsh_install_command: "sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'"

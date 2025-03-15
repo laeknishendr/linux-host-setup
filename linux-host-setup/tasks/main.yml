@@ -21,8 +21,8 @@
 
 - name: Copy .vimrc
   ansible.builtin.copy:
-    src: ".vimrc"
-    dest: "/home/{{ myuser }}/.vimrc"
+    src: "vimrc"
+    dest: "/etc/vimrc"
 - name: Copy .zshrc
   ansible.builtin.copy:
     src: ".zshrc"
