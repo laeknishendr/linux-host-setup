@@ -1,0 +1,16 @@
+repos:
+  - name: "brave"
+    url: "https://brave-browser-rpm-release.s3.brave.com/x86_64/"
+
+packages_to_install:
+  - vim
+  - zsh
+  - terminator
+  - dnf-plugins-core
+  - brave-browser
+
+oh_my_zsh_install_command: "sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'"
+
+hosts_entries:
+  - ip: "192.168.1.11"
+    hostname: "tannhauser-data"
