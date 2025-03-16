@@ -1,0 +1,6 @@
+all:
+  children:
+    fedora-pc:
+      hosts:
+        FUCKUP:
+          ansible_user: laek

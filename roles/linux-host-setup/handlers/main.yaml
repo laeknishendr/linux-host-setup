@@ -1,0 +1,4 @@
+- name: systemd reload
+  command: systemctl daemon-reload
+- name: dnf makecache
+  command: dnf makecache

@@ -1,0 +1,8 @@
+- name: Setup fuckup
+  hosts: FUCKUP
+  vars_files:
+    - host_vars/FUCKUP.yml
+  become: true
+  roles:
+    - role: linux-host-setup
+

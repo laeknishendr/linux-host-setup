@@ -1,0 +1,25 @@
+---
+repos:
+  - name: "brave"
+    url: "https://brave-browser-rpm-release.s3.brave.com/x86_64/"
+    description: "brave default repo"
+myuser: laek
+packages_to_install:
+  - python3-libdnf5
+  - vim-enhanced
+  - zsh
+  - terminator
+  - dnf-plugins-core
+  - brave-browser
+  - akmod-nvidia
+  - xorg-x11-drv-nvidia-cuda
+  - nvidia-xconfig
+  - nvidia-settings
+  - plasma-workspace-x11
+  - git
+
+oh_my_zsh_install_command: 'sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"'
+
+hosts:
+  - ip: "192.168.1.11"
+    hostname: "tannhauser-data"
